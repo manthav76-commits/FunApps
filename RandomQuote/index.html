@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Inspiration</h1>
+
+    <div class="card" id="card">
+      <div class="quote-mark">&ldquo;</div>
+      <p class="quote-text" id="quote-text"></p>
+      <div class="quote-mark close">&rdquo;</div>
+
+      <div class="author-section">
+        <div class="author-img-wrap">
+          <img class="author-img" id="author-img" src="" alt="" />
+          <div class="author-img-placeholder" id="author-placeholder"></div>
+        </div>
+        <div class="author-info">
+          <div class="author-name" id="author-name"></div>
+          <div class="author-title" id="author-title"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="next-btn" id="next-btn">
+      <span class="btn-icon">✦</span> New Quote
+    </button>
+
+    <div class="dot-row" id="dot-row"></div>
+
+    <a class="back-link" href="../">&#8592; Back to FunApps</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
