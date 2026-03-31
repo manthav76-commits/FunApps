@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Post Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LinkedIn Post Generator</h1>
+    <p class="subtitle">Create professional posts for your LinkedIn channels</p>
+
+    <!-- Step 1: Company -->
+    <div class="step">
+      <div class="step-label">1. Select Company</div>
+      <div class="option-grid">
+        <label class="option-card" id="card-synersys">
+          <input type="radio" name="company" value="synersys">
+          <div class="option-inner">
+            <div class="company-logo synersys-logo">S</div>
+            <div class="option-name">Synersys</div>
+            <div class="option-desc">Cybersecurity &amp; MSSP</div>
+          </div>
+        </label>
+        <label class="option-card" id="card-zentiti">
+          <input type="radio" name="company" value="zentiti">
+          <div class="option-inner">
+            <div class="company-logo zentiti-logo">Z</div>
+            <div class="option-name">Zentiti</div>
+            <div class="option-desc">Data Integration &amp; AI</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Step 2: Length -->
+    <div class="step">
+      <div class="step-label">2. Select Post Style</div>
+      <div class="option-grid">
+        <label class="option-card" id="card-short">
+          <input type="radio" name="length" value="short">
+          <div class="option-inner">
+            <div class="style-icon">⚡</div>
+            <div class="option-name">Short &amp; Punchy</div>
+            <div class="option-desc">3–5 lines, high impact</div>
+          </div>
+        </label>
+        <label class="option-card" id="card-medium">
+          <input type="radio" name="length" value="medium">
+          <div class="option-inner">
+            <div class="style-icon">📝</div>
+            <div class="option-name">Medium Story</div>
+            <div class="option-desc">8–12 lines, thought leadership</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Generate -->
+    <button class="generate-btn" id="generate-btn" disabled>Generate Post</button>
+
+    <!-- Result -->
+    <div class="result" id="result" style="display:none">
+      <div class="preview-wrap">
+        <canvas id="post-canvas"></canvas>
+      </div>
+
+      <div class="post-text-box">
+        <div class="post-text" id="post-text"></div>
+      </div>
+
+      <div class="action-row">
+        <button class="action-btn copy-btn" id="copy-btn">
+          <span id="copy-label">Copy Text</span>
+        </button>
+        <button class="action-btn download-btn" id="download-btn">Download Image</button>
+        <button class="action-btn regen-btn" id="regen-btn">Regenerate</button>
+      </div>
+    </div>
+
+    <a class="back-link" href="../">&#8592; Back to FunApps</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
