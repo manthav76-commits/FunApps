@@ -11,11 +11,10 @@
     <h1>LinkedIn Post Generator</h1>
     <p class="subtitle">Create professional posts for your LinkedIn channels</p>
 
-    <!-- Step 1: Company -->
     <div class="step">
       <div class="step-label">1. Select Company</div>
       <div class="option-grid">
-        <label class="option-card" id="card-synersys">
+        <label class="option-card">
           <input type="radio" name="company" value="synersys">
           <div class="option-inner">
             <div class="company-logo synersys-logo">S</div>
@@ -23,7 +22,7 @@
             <div class="option-desc">Cybersecurity &amp; MSSP</div>
           </div>
         </label>
-        <label class="option-card" id="card-zentiti">
+        <label class="option-card">
           <input type="radio" name="company" value="zentiti">
           <div class="option-inner">
             <div class="company-logo zentiti-logo">Z</div>
@@ -34,11 +33,10 @@
       </div>
     </div>
 
-    <!-- Step 2: Length -->
     <div class="step">
       <div class="step-label">2. Select Post Style</div>
       <div class="option-grid">
-        <label class="option-card" id="card-short">
+        <label class="option-card">
           <input type="radio" name="length" value="short">
           <div class="option-inner">
             <div class="style-icon">⚡</div>
@@ -46,7 +44,7 @@
             <div class="option-desc">3–5 lines, high impact</div>
           </div>
         </label>
-        <label class="option-card" id="card-medium">
+        <label class="option-card">
           <input type="radio" name="length" value="medium">
           <div class="option-inner">
             <div class="style-icon">📝</div>
@@ -57,26 +55,31 @@
       </div>
     </div>
 
-    <!-- Generate -->
     <button class="generate-btn" id="generate-btn" disabled>Generate Post</button>
 
-    <!-- Result -->
     <div class="result" id="result" style="display:none">
-      <div class="preview-wrap">
-        <canvas id="post-canvas"></canvas>
-      </div>
 
-      <div class="post-text-box">
-        <div class="post-text" id="post-text"></div>
-      </div>
-
-      <div class="action-row">
+      <div class="result-section">
+        <div class="result-section-label">POST TEXT — copy &amp; paste into LinkedIn</div>
+        <div class="post-text-box">
+          <div class="post-text" id="post-text"></div>
+        </div>
         <button class="action-btn copy-btn" id="copy-btn">
           <span id="copy-label">Copy Text</span>
         </button>
-        <button class="action-btn download-btn" id="download-btn">Download Image</button>
-        <button class="action-btn regen-btn" id="regen-btn">Regenerate</button>
       </div>
+
+      <div class="result-section">
+        <div class="result-section-label">VISUAL — download &amp; upload to LinkedIn post</div>
+        <div class="preview-wrap">
+          <canvas id="post-canvas"></canvas>
+        </div>
+        <div class="bottom-row">
+          <button class="action-btn download-btn" id="download-btn">Download Image</button>
+          <button class="action-btn regen-btn" id="regen-btn">Regenerate</button>
+        </div>
+      </div>
+
     </div>
 
     <a class="back-link" href="../">&#8592; Back to FunApps</a>

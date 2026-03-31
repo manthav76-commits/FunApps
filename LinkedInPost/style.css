@@ -5,11 +5,11 @@ body {
   background: #0d1b2a;
   color: #e2e8f0;
   min-height: 100vh;
-  padding: 32px 16px 48px;
+  padding: 32px 16px 56px;
 }
 
 .container {
-  max-width: 680px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -25,20 +25,19 @@ h1 {
 
 .subtitle {
   text-align: center;
-  color: #7a8ba0;
+  color: #5a7a96;
   font-size: 14px;
   margin-top: -20px;
 }
 
-/* Steps */
 .step { display: flex; flex-direction: column; gap: 12px; }
 
 .step-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #7a8ba0;
+  letter-spacing: 2px;
+  color: #5a7a96;
 }
 
 .option-grid {
@@ -57,13 +56,8 @@ h1 {
 }
 
 .option-card:hover { border-color: #f47c20; transform: translateY(-2px); }
-
 .option-card input[type="radio"] { display: none; }
-
-.option-card:has(input:checked) {
-  border-color: #f47c20;
-  background: #1a2f45;
-}
+.option-card:has(input:checked) { border-color: #f47c20; background: #1a2f45; }
 
 .option-inner {
   padding: 20px 16px;
@@ -75,15 +69,10 @@ h1 {
 }
 
 .company-logo {
-  width: 52px;
-  height: 52px;
+  width: 52px; height: 52px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  font-weight: 800;
-  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; font-weight: 800; color: #fff;
   margin-bottom: 4px;
 }
 
@@ -91,11 +80,9 @@ h1 {
 .zentiti-logo  { background: linear-gradient(135deg, #0d2137, #1a3d5c); border: 2px solid #f47c20; }
 
 .style-icon { font-size: 32px; margin-bottom: 4px; }
-
 .option-name { font-size: 15px; font-weight: 700; color: #e2e8f0; }
-.option-desc { font-size: 12px; color: #7a8ba0; }
+.option-desc { font-size: 12px; color: #5a7a96; }
 
-/* Generate button */
 .generate-btn {
   background: #f47c20;
   color: #fff;
@@ -106,7 +93,6 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s, opacity 0.2s;
-  letter-spacing: 0.5px;
 }
 
 .generate-btn:hover:not(:disabled) { background: #e06b10; }
@@ -114,22 +100,20 @@ h1 {
 .generate-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
 /* Result */
-.result { display: flex; flex-direction: column; gap: 16px; }
+.result { display: flex; flex-direction: column; gap: 24px; }
 
-.preview-wrap {
-  width: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+.result-section { display: flex; flex-direction: column; gap: 10px; }
+
+.result-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5a7a96;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #1a2f45;
 }
 
-.preview-wrap canvas {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Post text box */
 .post-text-box {
   background: #132033;
   border-radius: 12px;
@@ -139,27 +123,30 @@ h1 {
 
 .post-text {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.85;
   color: #c8d6e5;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
-/* Action buttons */
-.action-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+.preview-wrap {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
+
+.preview-wrap canvas { width: 100%; height: auto; display: block; }
 
 .action-btn {
   border: none;
   border-radius: 10px;
-  padding: 13px 8px;
+  padding: 13px 20px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.1s;
+  width: 100%;
 }
 
 .action-btn:active { transform: scale(0.97); }
@@ -167,23 +154,23 @@ h1 {
 .copy-btn     { background: #1a4a7a; color: #e2e8f0; }
 .copy-btn:hover { background: #1e5590; }
 
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .download-btn { background: #f47c20; color: #fff; }
 .download-btn:hover { background: #e06b10; }
 
 .regen-btn    { background: #1a2f45; color: #a8b8cc; }
 .regen-btn:hover { background: #243d5a; }
 
-/* Back link */
 .back-link {
-  color: #4a6580;
+  color: #3a5570;
   text-decoration: none;
   font-size: 13px;
   text-align: center;
   transition: color 0.2s;
 }
 .back-link:hover { color: #e2e8f0; }
-
-@media (max-width: 420px) {
-  .action-row { grid-template-columns: 1fr 1fr; }
-  .regen-btn  { grid-column: span 2; }
-}
