@@ -1,4 +1,4 @@
-// ─── Brand Config ───────────────────────────────────────────────────────────
+// ─── Brand Config ────────────────────────────────────────────────────────────
 const COMPANIES = {
   synersys: {
     name: 'Synersys',
@@ -16,7 +16,30 @@ const COMPANIES = {
   }
 };
 
-// ─── Post Templates ──────────────────────────────────────────────────────────
+// Unsplash photo IDs — cybersecurity for Synersys, data/tech for Zentiti
+const SYNERSYS_IMAGES = [
+  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=628&fit=crop&auto=format'
+];
+
+const ZENTITI_IMAGES = [
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=628&fit=crop&auto=format',
+  'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&h=628&fit=crop&auto=format'
+];
+
+// ─── Post Templates ───────────────────────────────────────────────────────────
 const POSTS = {
   synersys: {
     short: [
@@ -49,25 +72,25 @@ const POSTS = {
         hashtags: '#MSSP #CyberTalent #ManagedSecurity #Cybersecurity'
       },
       {
-        text: `Compliance and security are not the same thing.\n\nCompliance gets you a certificate.\n\nSecurity keeps you in business.\n\nDo not confuse them.`,
+        text: `Compliance and security are not the same thing.\n\nCompliance gets you a certificate.\nSecurity keeps you in business.\n\nDo not confuse them.`,
         hashtags: '#Compliance #Cybersecurity #CISO #RiskManagement'
       }
     ],
     medium: [
       {
-        text: `Most breaches do not start with a sophisticated zero-day exploit.\n\nThey start with a phishing email. A reused password. An unpatched system nobody remembered to update.\n\nThe uncomfortable truth? The fundamentals are still where most companies are failing.\n\nMeanwhile, the industry keeps chasing the next shiny security tool. More dashboards. More alerts. More noise.\n\nWhat actually moves the needle is discipline. Consistent patching. MFA everywhere. Monitored endpoints. A SOC that knows your environment cold.\n\nSecurity is not a technology problem with a technology solution. It is an operational problem that requires operational rigor.\n\nThe best security partnership you can have is one that treats your environment like their own. Knows the normal. Catches the abnormal. Fast.`,
+        text: `Most breaches do not start with a sophisticated zero-day exploit.\n\nThey start with a phishing email. A reused password. An unpatched system nobody remembered to update.\n\nThe uncomfortable truth? The fundamentals are still where most companies are failing.\n\nMeanwhile, the industry keeps chasing the next shiny security tool. More dashboards. More alerts. More noise.\n\nWhat actually moves the needle is discipline. Consistent patching. MFA everywhere. Monitored endpoints. A SOC that knows your environment cold.\n\nSecurity is not a technology problem with a technology solution. It is an operational problem that requires operational rigor.\n\nThe best security partnership is one that treats your environment like their own. Knows the normal. Catches the abnormal. Fast.`,
         hashtags: '#Cybersecurity #MSSP #SOC #ManagedSecurity #CyberDefense'
       },
       {
-        text: `A CISO told me something last year that stuck.\n\nHe said: "I have a $2M security budget and I still feel like I am bringing a knife to a gunfight."\n\nHe was not wrong.\n\nThe threat landscape has industrialized. Ransomware groups run like businesses. They have dev teams, QA processes, affiliate programs, and customer support for victims.\n\nMatching that level of organization requires more than a collection of point solutions.\n\nIt requires a mature, integrated security operation. Threat intelligence that is current. Detection that is automated. Response that is rehearsed.\n\nFor most companies, building that in-house is not realistic. That is exactly what an MSSP delivers.\n\nThe gap between "we have tools" and "we have a program" is where breaches happen. Close it.`,
+        text: `A CISO told me something last year that stuck.\n\nHe said: "I have a $2M security budget and I still feel like I am bringing a knife to a gunfight."\n\nHe was not wrong.\n\nThe threat landscape has industrialized. Ransomware groups run like businesses. Dev teams, QA processes, affiliate programs, and customer support for victims.\n\nMatching that level of organization requires more than a collection of point solutions.\n\nIt requires a mature, integrated security operation. Threat intelligence that is current. Detection that is automated. Response that is rehearsed.\n\nThe gap between "we have tools" and "we have a program" is where breaches happen.\n\nClose it.`,
         hashtags: '#MSSP #CyberDefense #Ransomware #CISO #SOC'
       },
       {
-        text: `The conversation around AI in cybersecurity has gotten loud. Here is what actually matters, stripped of the hype.\n\nAI helps defenders do three things faster: detect anomalies in massive data sets, correlate signals across disconnected systems, and prioritize which alerts actually need a human.\n\nThat last one is critical. Alert fatigue is real. Analysts are burning out. And burned-out analysts miss things.\n\nAI does not replace the analyst. It gives them back the hours they were spending on false positives, so they can focus on the threats that matter.\n\nThe organizations ahead of the curve are not the ones with the most AI tools. They are the ones who have integrated AI into their SOC workflow in a way that actually changes how analysts work.\n\nThere is a big difference between buying AI-powered products and running an AI-augmented security operation. Know the difference. Build the latter.`,
+        text: `The conversation around AI in cybersecurity has gotten loud.\n\nHere is what actually matters, stripped of the hype.\n\nAI helps defenders do three things faster: detect anomalies in massive data sets, correlate signals across disconnected systems, and prioritize which alerts need a human.\n\nThat last one is critical. Alert fatigue is real. Analysts are burning out. And burned-out analysts miss things.\n\nAI does not replace the analyst. It gives them back the hours spent on false positives so they can focus on threats that matter.\n\nThe organizations ahead are not the ones with the most AI tools. They are the ones who integrated AI into their SOC workflow in a way that actually changes how analysts work.\n\nThere is a big difference between buying AI-powered products and running an AI-augmented security operation.\n\nKnow the difference. Build the latter.`,
         hashtags: '#AIinCybersecurity #SOC #ThreatDetection #ManagedSecurity'
       },
       {
-        text: `Threat actors have a process. Most companies do not.\n\nReconnaissance. Initial access. Privilege escalation. Lateral movement. Exfiltration.\n\nEvery step of that kill chain is methodical. They are not rushing. They are patient.\n\nMost incident response plans assume the attack is happening right now. The reality is it started three weeks ago, and you just found out.\n\nModern security operations need to be built around that reality. Hunting for threats that have not triggered an alert yet. Checking for persistence mechanisms. Monitoring for low-and-slow data exfiltration.\n\nReactive security stops the attacks you already know about. Proactive security stops the ones you do not yet.\n\nThe companies that do not get breached are not lucky. They are operationally disciplined.`,
+        text: `Threat actors have a process. Most companies do not.\n\nReconnaissance. Initial access. Privilege escalation. Lateral movement. Exfiltration.\n\nEvery step of that kill chain is methodical. They are not rushing. They are patient.\n\nMost incident response plans assume the attack is happening right now. The reality is it started three weeks ago, and you just found out.\n\nModern security operations need to be built around that reality. Hunting for threats that have not triggered an alert yet. Checking for persistence mechanisms. Monitoring for low-and-slow data exfiltration.\n\nReactive security stops the attacks you already know about.\nProactive security stops the ones you do not yet.\n\nThe companies that do not get breached are not lucky. They are operationally disciplined.`,
         hashtags: '#ThreatHunting #SOC #Cybersecurity #MSSP #IncidentResponse'
       }
     ]
@@ -87,7 +110,7 @@ const POSTS = {
         hashtags: '#AIAgents #DataIntegration #Automation #APIFirst'
       },
       {
-        text: `Batch processing made sense when decisions could wait overnight.\n\nReal-time business needs real-time data.\n\nEvent-driven architecture is not a buzzword. It is the difference between acting on what is happening and reacting to what already happened.`,
+        text: `Batch processing made sense when decisions could wait overnight.\n\nReal-time business needs real-time data.\n\nEvent-driven architecture is the difference between acting on what is happening and reacting to what already happened.`,
         hashtags: '#RealTimeData #DataStreaming #EventDriven #Integration'
       },
       {
@@ -99,7 +122,7 @@ const POSTS = {
         hashtags: '#LegacyModernization #APIFirst #Integration #DigitalTransformation'
       },
       {
-        text: `APIs are the infrastructure of the modern enterprise.\n\nDesign them well and every future integration gets easier.\nDesign them poorly and every future integration is a project.\n\nAPI governance is not bureaucracy. It is compounding interest on every technical decision you make.`,
+        text: `APIs are the infrastructure of the modern enterprise.\n\nDesign them well and every future integration gets easier.\nDesign them poorly and every future integration is a project.\n\nAPI governance is compounding interest on every technical decision you make.`,
         hashtags: '#APIs #APIManagement #EnterpriseArchitecture #Integration'
       },
       {
@@ -109,32 +132,33 @@ const POSTS = {
     ],
     medium: [
       {
-        text: `Everyone is chasing AI. Very few companies are ready for it.\n\nThe ones seeing real ROI from AI share a common trait: they fixed their data infrastructure first.\n\nNot their models. Not their GPU spend. Their pipelines, their APIs, their data quality, their integration architecture.\n\nAI is a multiplier. If the underlying data is fragmented, inconsistent, or stale, better models just produce wrong answers faster.\n\nThe companies struggling with AI pilots are almost always struggling with a data problem underneath.\n\nBefore you ask "what AI should we use," ask "can our AI actually access the data it needs, in real time, with enough quality to trust the output?"\n\nMost cannot. That is the work. Get the foundation right. The AI returns will follow.`,
+        text: `Everyone is chasing AI. Very few companies are ready for it.\n\nThe ones seeing real ROI share a common trait: they fixed their data infrastructure first.\n\nNot their models. Not their GPU spend. Their pipelines, their APIs, their data quality, their integration architecture.\n\nAI is a multiplier. If the underlying data is fragmented, inconsistent, or stale, better models just produce wrong answers faster.\n\nThe companies struggling with AI pilots are almost always struggling with a data problem underneath.\n\nBefore you ask "what AI should we use," ask "can our AI actually access the data it needs, in real time, with enough quality to trust the output?"\n\nMost cannot. That is the work.\n\nGet the foundation right. The AI returns will follow.`,
         hashtags: '#AIReadiness #DataIntegration #EnterpriseAI #DataStrategy'
       },
       {
-        text: `I talk to CTOs every week who are frustrated with the same thing.\n\nTheir teams are brilliant. Their budgets are solid. But every new initiative takes longer than it should because the systems underneath do not talk to each other.\n\nNew product launch? Three months of integration work before the first line of business logic.\n\nNew analytics project? Six weeks cleaning and connecting data before any insight is generated.\n\nThis is the integration tax. And most enterprises pay it on every single project without ever addressing the root cause.\n\nAn API-first integration strategy eliminates the tax. Not all at once. But systematically, every integration you build makes the next one cheaper and faster.\n\nThe enterprises moving fastest are not the ones with the biggest teams. They are the ones who invested in their integration platform before they needed it.\n\nBuild the roads first. Then everything moves faster.`,
+        text: `I talk to CTOs every week who are frustrated with the same thing.\n\nBrilliant teams. Solid budgets. But every new initiative takes longer than it should because the systems underneath do not talk to each other.\n\nNew product launch? Three months of integration work before the first line of business logic.\n\nNew analytics project? Six weeks cleaning and connecting data before any insight is generated.\n\nThis is the integration tax. Most enterprises pay it on every single project without ever addressing the root cause.\n\nAn API-first integration strategy eliminates the tax. Not all at once. But systematically, every integration you build makes the next one cheaper and faster.\n\nBuild the roads first. Then everything moves faster.`,
         hashtags: '#APIFirst #EnterpriseIntegration #DigitalTransformation #DataStrategy'
       },
       {
-        text: `AI agents are not science fiction anymore.\n\nThey are running in production at companies right now, orchestrating multi-step workflows, making decisions, and acting on data without a human in the loop.\n\nBut here is the part that does not get enough attention.\n\nAn AI agent is only as capable as the systems it can access. If your CRM, ERP, and data warehouse are not exposed through clean, well-governed APIs, your agent cannot do much.\n\nAgent orchestration is the flashy part. The integration layer underneath is what makes it real.\n\nThe companies building serious agentic capabilities are investing heavily in API infrastructure. Not because it is exciting, but because without it, agents are just expensive chatbots.\n\nIf you are serious about AI agents in your enterprise, start by auditing what your systems can actually expose today. That gap is the project. Everything else is a demo.`,
+        text: `AI agents are not science fiction anymore.\n\nThey are running in production right now, orchestrating multi-step workflows, making decisions, and acting on data without a human in the loop.\n\nBut here is the part that does not get enough attention.\n\nAn AI agent is only as capable as the systems it can access. If your CRM, ERP, and data warehouse are not exposed through clean, well-governed APIs, your agent cannot do much.\n\nAgent orchestration is the flashy part. The integration layer underneath is what makes it real.\n\nThe companies building serious agentic capabilities are investing heavily in API infrastructure. Not because it is exciting, but because without it, agents are just expensive chatbots.\n\nAudit what your systems can actually expose today. That gap is the project. Everything else is a demo.`,
         hashtags: '#AIAgents #APIFirst #EnterpriseAI #DataIntegration #Automation'
       },
       {
-        text: `Digital transformation has been a goal for over a decade. Most enterprises are still not there.\n\nNot because they lack ambition or budget. Because they keep building on top of an integration architecture that was never designed for where they are going.\n\nPoint-to-point integrations made sense at 10 systems. At 500, they are a liability. Every change breaks something. Every new system is a negotiation with every existing system.\n\nA modern integration platform changes that model entirely. Hub, not web. Reusable connectors. Event-driven. Observable.\n\nIt is not the exciting part of transformation. It is the part everything else depends on.\n\nThe companies completing transformation initiatives are the ones who made the hard decision to fix integration first, even when it was not the shiniest thing on the roadmap.\n\nGet the platform right. The transformation follows.`,
+        text: `Digital transformation has been a goal for over a decade. Most enterprises are still not there.\n\nNot because they lack ambition or budget. Because they keep building on top of an integration architecture that was never designed for where they are going.\n\nPoint-to-point integrations made sense at 10 systems. At 500, they are a liability. Every change breaks something. Every new system is a negotiation with every existing system.\n\nA modern integration platform changes that model entirely. Hub, not web. Reusable connectors. Event-driven. Observable.\n\nIt is not the exciting part of transformation. It is the part everything else depends on.\n\nThe companies completing transformation are the ones who fixed integration first, even when it was not the shiniest thing on the roadmap.\n\nGet the platform right. The transformation follows.`,
         hashtags: '#DigitalTransformation #Integration #EnterpriseArchitecture #iPaaS'
       }
     ]
   }
 };
 
-// ─── State ───────────────────────────────────────────────────────────────────
-let currentCompany = null;
-let currentLength  = null;
-let currentPost    = null;
-let usedIndices    = { synersys: { short: [], medium: [] }, zentiti: { short: [], medium: [] } };
+// ─── State ────────────────────────────────────────────────────────────────────
+let currentCompany  = null;
+let currentLength   = null;
+let currentPost     = null;
+let currentImgIndex = { synersys: 0, zentiti: 0 };
+let usedIndices     = { synersys: { short: [], medium: [] }, zentiti: { short: [], medium: [] } };
 
-// ─── UI Elements ─────────────────────────────────────────────────────────────
+// ─── UI Elements ──────────────────────────────────────────────────────────────
 const generateBtn = document.getElementById('generate-btn');
 const resultEl    = document.getElementById('result');
 const postTextEl  = document.getElementById('post-text');
@@ -144,19 +168,12 @@ const copyLabel   = document.getElementById('copy-label');
 const downloadBtn = document.getElementById('download-btn');
 const regenBtn    = document.getElementById('regen-btn');
 
-// ─── Radio Listeners ─────────────────────────────────────────────────────────
+// ─── Radio Listeners ──────────────────────────────────────────────────────────
 document.querySelectorAll('input[name="company"]').forEach(r => {
-  r.addEventListener('change', () => {
-    currentCompany = r.value;
-    checkReady();
-  });
+  r.addEventListener('change', () => { currentCompany = r.value; checkReady(); });
 });
-
 document.querySelectorAll('input[name="length"]').forEach(r => {
-  r.addEventListener('change', () => {
-    currentLength = r.value;
-    checkReady();
-  });
+  r.addEventListener('change', () => { currentLength = r.value; checkReady(); });
 });
 
 function checkReady() {
@@ -166,8 +183,8 @@ function checkReady() {
 generateBtn.addEventListener('click', generatePost);
 regenBtn.addEventListener('click', generatePost);
 
-// ─── Generate ────────────────────────────────────────────────────────────────
-function generatePost() {
+// ─── Generate ─────────────────────────────────────────────────────────────────
+async function generatePost() {
   const pool = POSTS[currentCompany][currentLength];
   let used   = usedIndices[currentCompany][currentLength];
 
@@ -178,115 +195,138 @@ function generatePost() {
   const available = pool.map((_, i) => i).filter(i => !used.includes(i));
   const idx = available[Math.floor(Math.random() * available.length)];
   used.push(idx);
-
   currentPost = pool[idx];
 
   const fullText = currentPost.text + '\n\n' + currentPost.hashtags;
   postTextEl.textContent = fullText;
 
-  renderCanvas(currentPost, COMPANIES[currentCompany]);
+  // Pick next image for this company
+  const imgList = currentCompany === 'synersys' ? SYNERSYS_IMAGES : ZENTITI_IMAGES;
+  const imgUrl  = imgList[currentImgIndex[currentCompany] % imgList.length];
+  currentImgIndex[currentCompany]++;
+
+  generateBtn.disabled = true;
+  generateBtn.textContent = 'Generating...';
+
+  await renderCanvas(currentPost, COMPANIES[currentCompany], imgUrl);
+
+  generateBtn.disabled = false;
+  generateBtn.textContent = 'Generate Post';
 
   resultEl.style.display = 'flex';
   resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   copyLabel.textContent = 'Copy Text';
 }
 
-// ─── Canvas Renderer ─────────────────────────────────────────────────────────
-function renderCanvas(post, company) {
-  const W = 1200;
-  const HEADER_H = 140;
-  const FOOTER_H = 72;
-  const PAD_X = 70;
-  const BODY_FONT = 28;
-  const LINE_H = BODY_FONT * 1.65;
-  const MAX_TEXT_W = W - PAD_X * 2;
+// ─── Canvas Renderer ──────────────────────────────────────────────────────────
+async function renderCanvas(post, company, imgUrl) {
+  const W       = 1200;
+  const PAD_X   = 70;
+  const FONT_SZ = 27;
+  const LINE_H  = FONT_SZ * 1.68;
 
-  const ctx = canvas.getContext('2d');
+  // Temp canvas to measure text height
+  const tmpCtx = document.createElement('canvas').getContext('2d');
+  tmpCtx.font = `${FONT_SZ}px Arial, sans-serif`;
+  const bodyLines = wrapAllText(tmpCtx, post.text, W - PAD_X * 2);
+  const hashLines = wrapAllText(tmpCtx, post.hashtags, W - PAD_X * 2);
+  const textH = (bodyLines.length + 1.2 + hashLines.length) * LINE_H;
 
-  // Measure text height first
-  canvas.width = W;
-  canvas.height = 100;
-  ctx.font = `${BODY_FONT}px Arial, sans-serif`;
-  const lines = wrapAllText(ctx, post.text, MAX_TEXT_W);
-  const hashLines = wrapAllText(ctx, post.hashtags, MAX_TEXT_W);
+  const HEADER_H = 148;
+  const FOOTER_H = 60;
+  const H = Math.max(628, HEADER_H + textH + FOOTER_H + 40);
 
-  const textBlockH = (lines.length + 1 + hashLines.length) * LINE_H;
-  const H = Math.max(628, HEADER_H + textBlockH + FOOTER_H + 60);
   canvas.width  = W;
   canvas.height = H;
+  const ctx = canvas.getContext('2d');
 
-  // Background
-  ctx.fillStyle = company.bgColor;
-  ctx.fillRect(0, 0, W, H);
-
-  // Background pattern
-  if (company.patternType === 'circuit') {
-    drawCircuitPattern(ctx, W, H);
-  } else {
-    drawNodesPattern(ctx, W, H);
+  // 1. Draw background photo
+  try {
+    const img = await loadImage(imgUrl);
+    // Cover-fit the image
+    const scale = Math.max(W / img.width, H / img.height);
+    const sw = img.width  * scale;
+    const sh = img.height * scale;
+    const sx = (W - sw) / 2;
+    const sy = (H - sh) / 2;
+    ctx.drawImage(img, sx, sy, sw, sh);
+  } catch {
+    // Fallback: solid bg
+    ctx.fillStyle = company.bgColor;
+    ctx.fillRect(0, 0, W, H);
   }
 
-  // Subtle dark overlay for readability
+  // 2. Dark gradient overlay so text is always readable
   const overlay = ctx.createLinearGradient(0, 0, 0, H);
-  overlay.addColorStop(0, 'rgba(9,28,46,0.55)');
-  overlay.addColorStop(1, 'rgba(9,28,46,0.75)');
+  overlay.addColorStop(0, 'rgba(8,18,32,0.78)');
+  overlay.addColorStop(0.4, 'rgba(8,18,32,0.82)');
+  overlay.addColorStop(1, 'rgba(8,18,32,0.92)');
   ctx.fillStyle = overlay;
   ctx.fillRect(0, 0, W, H);
 
-  // Top accent bar
+  // 3. Top accent bar
   ctx.fillStyle = company.accentColor;
   ctx.fillRect(0, 0, W, 7);
 
-  // Left accent stripe
+  // 4. Left accent stripe
   ctx.fillStyle = company.accentColor;
   ctx.fillRect(0, 0, 5, H);
 
-  // Company name
+  // 5. Company name
   ctx.fillStyle = company.accentColor;
-  ctx.font = 'bold 46px Arial, sans-serif';
-  ctx.fillText(company.name.toUpperCase(), PAD_X, 66);
+  ctx.font = 'bold 48px Arial, sans-serif';
+  ctx.fillText(company.name.toUpperCase(), PAD_X, 68);
 
-  // Tagline
-  ctx.fillStyle = '#8fa8c2';
-  ctx.font = '22px Arial, sans-serif';
-  ctx.fillText(company.tagline, PAD_X, 104);
+  // 6. Tagline
+  ctx.fillStyle = '#9ab0c8';
+  ctx.font = '21px Arial, sans-serif';
+  ctx.fillText(company.tagline, PAD_X, 106);
 
-  // Divider
-  ctx.strokeStyle = 'rgba(244,124,32,0.4)';
+  // 7. Divider line
+  ctx.strokeStyle = 'rgba(244,124,32,0.45)';
   ctx.lineWidth = 1.5;
   ctx.beginPath();
-  ctx.moveTo(PAD_X, HEADER_H - 12);
-  ctx.lineTo(W - PAD_X, HEADER_H - 12);
+  ctx.moveTo(PAD_X, 130);
+  ctx.lineTo(W - PAD_X, 130);
   ctx.stroke();
 
-  // Post body text
-  ctx.fillStyle = '#dde8f4';
-  ctx.font = `${BODY_FONT}px Arial, sans-serif`;
-  let y = HEADER_H + LINE_H;
-  for (const line of lines) {
+  // 8. Body text
+  ctx.fillStyle = '#ddeaf6';
+  ctx.font = `${FONT_SZ}px Arial, sans-serif`;
+  let y = HEADER_H + LINE_H * 0.3;
+  for (const line of bodyLines) {
     ctx.fillText(line, PAD_X, y);
     y += LINE_H;
   }
 
-  // Hashtags
-  y += LINE_H * 0.4;
+  // 9. Hashtags
+  y += LINE_H * 0.5;
   ctx.fillStyle = company.accentColor;
-  ctx.font = `${BODY_FONT - 4}px Arial, sans-serif`;
+  ctx.font = `${FONT_SZ - 4}px Arial, sans-serif`;
   for (const hline of hashLines) {
     ctx.fillText(hline, PAD_X, y);
-    y += LINE_H;
+    y += LINE_H * 0.9;
   }
 
-  // Bottom bar
+  // 10. Bottom bar
   ctx.fillStyle = company.accentColor;
   ctx.fillRect(0, H - 7, W, 7);
 }
 
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload  = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+}
+
 function wrapAllText(ctx, text, maxWidth) {
-  const paragraphs = text.split('\n');
   const result = [];
-  for (const para of paragraphs) {
-    if (para.trim() === '') { result.push(''); continue; }
+  for (const para of text.split('\n')) {
+    if (!para.trim()) { result.push(''); continue; }
     const words = para.split(' ');
     let line = '';
     for (const word of words) {
@@ -303,120 +343,16 @@ function wrapAllText(ctx, text, maxWidth) {
   return result;
 }
 
-// ─── Circuit Board Pattern ────────────────────────────────────────────────────
-function drawCircuitPattern(ctx, W, H) {
-  ctx.save();
-  ctx.globalAlpha = 0.18;
-  ctx.strokeStyle = '#f47c20';
-  ctx.lineWidth = 1.2;
-
-  const seed = 42;
-  const nodes = [];
-  const rng = seededRng(seed);
-
-  for (let i = 0; i < 28; i++) {
-    nodes.push({ x: rng() * W, y: rng() * H });
-  }
-
-  // Draw connections between nearby nodes
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const dx = nodes[i].x - nodes[j].x;
-      const dy = nodes[i].y - nodes[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 220) {
-        ctx.beginPath();
-        // Right-angle routing style
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        ctx.lineTo(nodes[j].x, nodes[i].y);
-        ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.stroke();
-      }
-    }
-  }
-
-  // Draw nodes
-  ctx.globalAlpha = 0.35;
-  for (const n of nodes) {
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = '#f47c20';
-    ctx.fill();
-  }
-
-  ctx.restore();
-}
-
-// ─── Data Nodes Pattern ───────────────────────────────────────────────────────
-function drawNodesPattern(ctx, W, H) {
-  ctx.save();
-  ctx.globalAlpha = 0.18;
-  ctx.strokeStyle = '#4a90d9';
-  ctx.lineWidth = 1.2;
-
-  const rng = seededRng(99);
-  const nodes = [];
-
-  for (let i = 0; i < 24; i++) {
-    nodes.push({ x: rng() * W, y: rng() * H });
-  }
-
-  // Draw curved connections
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const dx = nodes[i].x - nodes[j].x;
-      const dy = nodes[i].y - nodes[j].y;
-      if (Math.sqrt(dx * dx + dy * dy) < 260) {
-        const cx = (nodes[i].x + nodes[j].x) / 2 + (rng() - 0.5) * 60;
-        const cy = (nodes[i].y + nodes[j].y) / 2 + (rng() - 0.5) * 60;
-        ctx.beginPath();
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        ctx.quadraticCurveTo(cx, cy, nodes[j].x, nodes[j].y);
-        ctx.stroke();
-      }
-    }
-  }
-
-  // Draw nodes with glow rings
-  for (const n of nodes) {
-    ctx.globalAlpha = 0.1;
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, 12, 0, Math.PI * 2);
-    ctx.fillStyle = '#4a90d9';
-    ctx.fill();
-
-    ctx.globalAlpha = 0.4;
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = '#f47c20';
-    ctx.fill();
-  }
-
-  ctx.restore();
-}
-
-// Simple seeded RNG (mulberry32)
-function seededRng(seed) {
-  let s = seed;
-  return function() {
-    s |= 0; s = s + 0x6D2B79F5 | 0;
-    let t = Math.imul(s ^ s >>> 15, 1 | s);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
-  };
-}
-
-// ─── Copy ────────────────────────────────────────────────────────────────────
+// ─── Copy ─────────────────────────────────────────────────────────────────────
 copyBtn.addEventListener('click', () => {
   if (!currentPost) return;
-  const text = currentPost.text + '\n\n' + currentPost.hashtags;
-  navigator.clipboard.writeText(text).then(() => {
+  navigator.clipboard.writeText(currentPost.text + '\n\n' + currentPost.hashtags).then(() => {
     copyLabel.textContent = 'Copied!';
     setTimeout(() => { copyLabel.textContent = 'Copy Text'; }, 2000);
   });
 });
 
-// ─── Download ────────────────────────────────────────────────────────────────
+// ─── Download ─────────────────────────────────────────────────────────────────
 downloadBtn.addEventListener('click', () => {
   const link = document.createElement('a');
   link.download = `${currentCompany}-linkedin-post.png`;
