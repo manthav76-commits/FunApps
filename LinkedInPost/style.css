@@ -160,6 +160,9 @@ h1 {
   gap: 10px;
 }
 
+.new-image-btn { background: #132033; color: #a8b8cc; border: 1px dashed #2a4a6a; }
+.new-image-btn:hover { background: #1a2f45; color: #e2e8f0; border-color: #f47c20; }
+
 .download-btn { background: #f47c20; color: #fff; }
 .download-btn:hover { background: #e06b10; }
 
